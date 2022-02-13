@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="This is the description">
+  <link rel="stylesheet" href="styles.css" />
+  <title>The Engines | About</title>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="nav main-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="store.html">STORE</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    
+    <h1 class="band-name band-name-large">Engines</h1>
+  </header>  
+  <section class="content-section container">
+    <h2 class="section-header">ABOUT</h2>
+    <img class="about-band-image" src="images/stiahnuť (1).jpg">
+    <p>Since shouldComponentUpdate returned false for the subtree rooted at C2, React did not attempt to render C2, and thus didn’t even have to invoke shouldComponentUpdate on C4 and C5.
+
+      For C1 and C3, shouldComponentUpdate returned true, so React had to go down to the leaves and check them. For C6 shouldComponentUpdate returned true, and since the rendered elements weren’t equivalent React had to update the DOM.
+    </p>
+    <!-- <img class="about-band-image" src="images/stiahnuť (1).jpg"> -->
+    <p>
+      In this code, shouldComponentUpdate is just checking if there is any change in props.color or state.count. If those values don’t change, the component doesn’t update. If your component got more complex, you could use a similar pattern of doing a “shallow comparison” between all the fields of props and state to determine if the component should update. This pattern is common enough that React provides a helper to use this logic - just inherit from React.PureComponent. So this code is a simpler way to achieve the same thing:
+    </p>
+  </section>
+  <footer class="main-footer">
+    <div class="container main-footer-container">
+      <h3 class="band-name">The Engines</h3>
+      <ul class="nav footer-nav">
+        <li><a href="https://youtube.com" target="_blank">images/youtube_logo.png<img src="images/youtube_logo.png"></a></li>
+        <li><a href="https://spotify.com" target="_blank">images/spotify_logo.png<img src="images/spotify_logo.png"></a></li>
+        <li><a href="https://facebook.com" target="_blank">images/facebook_logo.png<img src="images/facebook_logo.png"></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
