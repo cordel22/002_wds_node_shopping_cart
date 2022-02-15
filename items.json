@@ -1,0 +1,42 @@
+{
+  "music": [
+    {
+      "id": 1,
+      "name": "Album 1",
+      "price": 1299,
+      "imgName": "stiahnuť (2).jpg"
+    },
+    {
+      "id": 2,
+      "name": "Album 1",
+      "price": 1299,
+      "imgName": "stiahnuť (2).jpg"
+    },
+    {
+      "id": 3,
+      "name": "Album 1",
+      "price": 1299,
+      "imgName": "stiahnuť (2).jpg"
+    },
+    {
+      "id": 4,
+      "name": "Album 1",
+      "price": 1299,
+      "imgName": "stiahnuť (2).jpg"
+    }
+  ],
+  "merch": [
+    {
+      "id": 5,
+      "name": "T-Shirt",
+      "price": 1099,
+      "imgName": "stiahnuť (6).jpg"
+    },
+    {
+      "id": 6,
+      "name": "Coffee Hug",
+      "price": 1499,
+      "imgName": "stiahnuť (6).jpg"
+    }
+  ]
+}

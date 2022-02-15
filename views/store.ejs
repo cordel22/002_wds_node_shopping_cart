@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="This is the description">
   <link rel="stylesheet" href="styles.css" />
-  <script src="store.js" async></script>
+  <script src="https://checkout.stripe.com/checkout.js" defer></script>
+  <!-- <script src="https://js.stripe.com/v3/" defer></script> -->
+  <script>
+    var stripePublicKey = "<%= stripePublicKey %>"
+  </script>
+  <script src="store.js" defer></script>
   <title>The Engines | Store</title>
 </head>
 <body>
@@ -23,74 +28,39 @@
   <section class="container content-section">
     <h2 class="section-header">MUSIC</h2>
       <div class="shop-items">
-        <div class="shop-item">
+        <% items.music.forEach(function(item) { %>
+        <div class="shop-item" data-item-id="<%= item.id %>">
           <!-- <div> -->
-            <span class="shop-item-title">Album 1</span>
+            <span class="shop-item-title"><%= item.name %></span>
           <!-- </div> -->
-          <img class="shop-item-image" src="images/stiahnuť (2).jpg" width="250">
+          <img class="shop-item-image" src="images/<%= item.imgName %>" width="250">
           <div class="shop-item-details">
             <span class="shop-item-price">
-              $12.99</span>
+              $<%= item.price / 100 %></span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
           </div>
         </div>
-        <div class="shop-item">
-          <!-- <div> -->
-            <span class="shop-item-title">Album 1</span>
-          <!-- </div> -->
-          <img class="shop-item-image" src="images/stiahnuť (2).jpg" width="250">
-          <div class="shop-item-details">
-            <span class="shop-item-price">
-              $12.99</span>
-            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-          </div>
-        </div>
-        <div class="shop-item">
-          <!-- <div> -->
-            <span class="shop-item-title">Album 1</span>
-          <!-- </div> -->
-          <img class="shop-item-image" src="images/stiahnuť (2).jpg" width="250">
-          <div class="shop-item-details">
-            <span class="shop-item-price">
-              $12.99</span>
-            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-          </div>
-        </div>
-        <div class="shop-item">
-          <!-- <div> -->
-            <span class="shop-item-title">Album 1</span>
-          <!-- </div> -->
-          <img class="shop-item-image" src="images/stiahnuť (2).jpg" width="250">
-          <div class="shop-item-details">
-            <span class="shop-item-price">
-              $12.99</span>
-            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-          </div>
-        </div>
+        <% }) %> 
+        
+        
       </div>
   </section>
   <section class="container content-section">
     <h2 class="section-header">MERCH</h2>
     <div class="shop-items">
-      <div class="shop-item">
-          <span class="shop-item-title">T-Shirt</span>
-        <!-- </div> -->
-        <img class="shop-item-image" src="images/stiahnuť (6).jpg" width="250">
-        <div class="shop-item-details">
-          <span class="shop-item-price">$10.99</span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      <% items.merch.forEach(function(item) { %>
+        <div class="shop-item" data-item-id="<%= item.id %>">
+          <!-- <div> -->
+            <span class="shop-item-title"><%= item.name %></span>
+          <!-- </div> -->
+          <img class="shop-item-image" src="images/<%= item.imgName %>" width="250">
+          <div class="shop-item-details">
+            <span class="shop-item-price">
+              $<%= item.price / 100 %></span>
+            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+          </div>
         </div>
-      </div>
-      <div class="shop-item">
-        <!-- <div> -->
-          <span class="shop-item-title">Coffee Hug</span>
-        <!-- </div> -->
-        <img class="shop-item-image" src="images/stiahnuť (6).jpg" width="250">
-        <div class="shop-item-details">
-          <span class="shop-item-price">$14.99</span>
-          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-        </div>
-      </div>
+        <% }) %> 
     </div>
   </section>
   <section class="container content-section">
