@@ -21,14 +21,16 @@
   </header>  
   <section class="content-section container">
     <h2 class="section-header">ABOUT</h2>
-    <img class="about-band-image" src="images/stiahnuť (1).jpg">
-    <p>Since shouldComponentUpdate returned false for the subtree rooted at C2, React did not attempt to render C2, and thus didn’t even have to invoke shouldComponentUpdate on C4 and C5.
+    <img class="about-band-image" src="images/about.jpg">
+    <p>Ferrari’s illustrious career on the racetrack wasn’t easily earned. After shaping the European circuit in the early 1950s, the brand set out to create the next generation of V6 and V8 power plants. Coincidentally, this would take place under the partnership of both Enzo Ferrari and his son, Alfredo. Under the supervision of the pair, the Ferrari Dino engine was born — a groundbreaking capsule of mechanically-inclined V6 and V8 examples that would power the brand’s vehicles for years to come. Although the Ferrari Dino enterprise spanned from the 1950s into the early 2000s, the Dino V6 was the outfit’s first breakthrough, offering the quintessential 1.5-liter engine for use within the Formula Two auto racing series.
 
-      For C1 and C3, shouldComponentUpdate returned true, so React had to go down to the leaves and check them. For C6 shouldComponentUpdate returned true, and since the rendered elements weren’t equivalent React had to update the DOM.
+      In 1956, the development (and production) of the industry’s first 65° V6 engine was well underway, and by April of 1957, it would make its debut in the Dino 156 F2 during the Grand Prix of Naples. What made the Ferrari Dino V6 so interesting, however, was the fact that it didn’t harbor a true V6 layout. Instead, it featured a separate crankpin for each connecting rod, resulting in true harmonic balance and increased horsepower. During its short stint within the world of racing, the Ferrari Dino V6 made its mark as one of the most refined engines of its era, paving the way for the brand’s impending breakthroughs.
     </p>
     <!-- <img class="about-band-image" src="images/stiahnuť (1).jpg"> -->
     <p>
-      In this code, shouldComponentUpdate is just checking if there is any change in props.color or state.count. If those values don’t change, the component doesn’t update. If your component got more complex, you could use a similar pattern of doing a “shallow comparison” between all the fields of props and state to determine if the component should update. This pattern is common enough that React provides a helper to use this logic - just inherit from React.PureComponent. So this code is a simpler way to achieve the same thing:
+      Ferrari is gracing our list for the second time with its groundbreaking 3.0-liter V12 — a historic model known by many as the “Colombo.” Before the automaker’s significant engine breakthrough, which took place near the end of the 1950s, the Colombo reigned supreme as its most daunting V12. To this day, it’s revered as one of the greatest engines of all time, thanks to its widespread use from 1947 to 1988 in a variety of vehicles — most notably, Ferrari’s very first F1 car, the 125 F1; the 250 TR, its infamous “Testa Rossa” racing car; and the 250 GT SWB, which remains one of Ferrari’s most influential models.
+
+Throughout its tenure, the engine’s various evolutions would make their debut on the racetrack ahead of their publicly-produced counterparts, with circuits like Le Mans, Carrera Panamericana, Mille Miglia, and Sebring falling underneath its umbrella. At the tail-end of the 1960s, a revised edition was proposed for the 275 GTB/4. Despite the prominence of its predecessor, the engine was completely overhauled, adopting dual overhead cams, a more compact head, courtesy of its reduced valve angle, and a dry-sump design, resulting in an attractive 325-horsepower output.
     </p>
   </section>
   <footer class="main-footer">
